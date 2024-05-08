@@ -31,4 +31,12 @@ public class UnitTests
         Assert.Equal(3, LeftClosestBinarySearch.ClosestBinarySearch(a, target1));
         Assert.Equal(21, LeftClosestBinarySearch.ClosestBinarySearch(a, target2));
     }
+
+    [Fact]
+    public void TestEmptyArray()
+    {
+        int[] a = { };
+        int target = 10;
+        Assert.Equal(-1, LeftClosestBinarySearch.ClosestBinarySearch(a, target));
+    }
 }

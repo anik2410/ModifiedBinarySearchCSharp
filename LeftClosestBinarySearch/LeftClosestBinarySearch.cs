@@ -2,6 +2,11 @@
 class LeftClosestBinarySearch{
     public static int ClosestBinarySearch(int[] a, int target)
     {
+        if (a.Length == 0)
+        {
+            Console.WriteLine("array is empty");
+            return -1;
+        }
         if (Enumerable.Range(a.First(), a.Last()).Contains(target))
         {
             int low = 0;
@@ -11,8 +16,6 @@ class LeftClosestBinarySearch{
             while (low <= high)
             {
                 int mid = (low + high) / 2;
-                Console.WriteLine($"mid: {mid}");
-                Console.WriteLine($"left closest: {leftClosest}");
                 if (a[mid] == target)
                 {
                     Console.WriteLine($"found exact match: {a[mid]}");
